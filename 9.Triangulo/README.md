@@ -30,9 +30,9 @@ pip install -r requirements.txt
 Isso irá instalar automaticamente todas as bibliotecas necessárias:
 
 ```
-• `robotframework`
-• `robotframework-seleniumlibrary`
-• `selenium`
+• robotframework
+• robotframework-seleniumlibrary
+• selenium
 ```
 
 ### 🚀 Como executar os testes
