@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2025-05-15T14:08:28.809192" rpa="false" schemaversion="5">
+<suite id="s1" name="Validacao Erro" source="D:\SELENIUM\FPFTECH\Triangulos\testes\validacao_erro.robot">
+<kw name="Abrir Aplicacao" owner="triangulo_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:28.952146" level="INFO">Opening browser 'edge' to base url 'http://www.vanilton.net/triangulo/'.</msg>
+<arg>${URL}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-15T14:08:28.952146" elapsed="2.042705"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-15T14:08:30.997492" elapsed="0.024207"/>
+</kw>
+<status status="PASS" start="2025-05-15T14:08:28.952146" elapsed="2.069553"/>
+</kw>
+<test id="s1-t1" name="Lados Iguais À Soma De Outro Lado" line="9">
+<kw name="Verificar Mensagem De Erro Com Entradas Invalidas" owner="triangulo_keywords">
+<kw name="Preencher Lados Do Triangulo" owner="triangulo_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:31.021699" level="INFO">Typing text '1' into text field 'name:V1'.</msg>
+<arg>name:V1</arg>
+<arg>${V1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:31.021699" elapsed="0.067005"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:31.088704" level="INFO">Typing text '2' into text field 'name:V2'.</msg>
+<arg>name:V2</arg>
+<arg>${V2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:31.088704" elapsed="0.060693"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:31.149397" level="INFO">Typing text '3' into text field 'name:V3'.</msg>
+<arg>name:V3</arg>
+<arg>${V3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:31.149397" elapsed="0.052882"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:31.203281" level="INFO">Clicking button 'xpath=//input[@type='submit' and @value='Identificar']'.</msg>
+<arg>xpath=//input[@type='submit' and @value='Identificar']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:31.203281" elapsed="0.250641"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-15T14:08:32.455414" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-15T14:08:31.454992" elapsed="1.000422"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:32.530686" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:32.455414" elapsed="0.075272"/>
+</kw>
+<arg>${L1}</arg>
+<arg>${L2}</arg>
+<arg>${L3}</arg>
+<status status="PASS" start="2025-05-15T14:08:31.021699" elapsed="1.508987"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:32.539829" level="INFO">Current page contains text 'erro'.</msg>
+<arg>erro</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-15T14:08:32.531693" elapsed="0.008136"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:32.604617" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:32.539829" elapsed="0.064788"/>
+</kw>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<status status="PASS" start="2025-05-15T14:08:31.021699" elapsed="1.582918"/>
+</kw>
+<status status="PASS" start="2025-05-15T14:08:31.021699" elapsed="1.582918"/>
+</test>
+<test id="s1-t2" name="Lado Maior Que Soma Dos Outros Dois" line="10">
+<kw name="Verificar Mensagem De Erro Com Entradas Invalidas" owner="triangulo_keywords">
+<kw name="Preencher Lados Do Triangulo" owner="triangulo_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:32.615541" level="INFO">Typing text '10' into text field 'name:V1'.</msg>
+<arg>name:V1</arg>
+<arg>${V1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:32.615541" elapsed="0.044349"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:32.659890" level="INFO">Typing text '2' into text field 'name:V2'.</msg>
+<arg>name:V2</arg>
+<arg>${V2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:32.659890" elapsed="0.043522"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:32.703412" level="INFO">Typing text '3' into text field 'name:V3'.</msg>
+<arg>name:V3</arg>
+<arg>${V3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:32.703412" elapsed="0.042524"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:32.745936" level="INFO">Clicking button 'xpath=//input[@type='submit' and @value='Identificar']'.</msg>
+<arg>xpath=//input[@type='submit' and @value='Identificar']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:32.745936" elapsed="0.239346"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-15T14:08:33.985622" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-15T14:08:32.985282" elapsed="1.000340"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:34.057853" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:33.985622" elapsed="0.072231"/>
+</kw>
+<arg>${L1}</arg>
+<arg>${L2}</arg>
+<arg>${L3}</arg>
+<status status="PASS" start="2025-05-15T14:08:32.604617" elapsed="1.453236"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:34.063859" level="INFO">Current page contains text 'erro'.</msg>
+<arg>erro</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-15T14:08:34.057853" elapsed="0.006006"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:34.125163" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:34.063859" elapsed="0.061304"/>
+</kw>
+<arg>10</arg>
+<arg>2</arg>
+<arg>3</arg>
+<status status="PASS" start="2025-05-15T14:08:32.604617" elapsed="1.520546"/>
+</kw>
+<status status="PASS" start="2025-05-15T14:08:32.604617" elapsed="1.520546"/>
+</test>
+<test id="s1-t3" name="Lado Igual À Soma Dos Outros Dois" line="11">
+<kw name="Verificar Mensagem De Erro Com Entradas Invalidas" owner="triangulo_keywords">
+<kw name="Preencher Lados Do Triangulo" owner="triangulo_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:34.136653" level="INFO">Typing text '5' into text field 'name:V1'.</msg>
+<arg>name:V1</arg>
+<arg>${V1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:34.136653" elapsed="0.044189"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:34.180842" level="INFO">Typing text '5' into text field 'name:V2'.</msg>
+<arg>name:V2</arg>
+<arg>${V2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:34.180842" elapsed="0.041624"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:34.222466" level="INFO">Typing text '10' into text field 'name:V3'.</msg>
+<arg>name:V3</arg>
+<arg>${V3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:34.222466" elapsed="0.043472"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:34.265938" level="INFO">Clicking button 'xpath=//input[@type='submit' and @value='Identificar']'.</msg>
+<arg>xpath=//input[@type='submit' and @value='Identificar']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:34.265938" elapsed="0.235325"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-15T14:08:35.501456" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-15T14:08:34.501263" elapsed="1.000193"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:35.570298" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:35.501456" elapsed="0.068842"/>
+</kw>
+<arg>${L1}</arg>
+<arg>${L2}</arg>
+<arg>${L3}</arg>
+<status status="PASS" start="2025-05-15T14:08:34.125163" elapsed="1.445135"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:35.578728" level="INFO">Current page contains text 'erro'.</msg>
+<arg>erro</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-15T14:08:35.570298" elapsed="0.008430"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:35.640839" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:35.578728" elapsed="0.062111"/>
+</kw>
+<arg>5</arg>
+<arg>5</arg>
+<arg>10</arg>
+<status status="PASS" start="2025-05-15T14:08:34.125163" elapsed="1.515676"/>
+</kw>
+<status status="PASS" start="2025-05-15T14:08:34.125163" elapsed="1.515676"/>
+</test>
+<test id="s1-t4" name="Todos Os Lados Zeros" line="12">
+<kw name="Verificar Mensagem De Erro Com Entradas Invalidas" owner="triangulo_keywords">
+<kw name="Preencher Lados Do Triangulo" owner="triangulo_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:35.640839" level="INFO">Typing text '0' into text field 'name:V1'.</msg>
+<arg>name:V1</arg>
+<arg>${V1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:35.640839" elapsed="0.055389"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:35.696228" level="INFO">Typing text '0' into text field 'name:V2'.</msg>
+<arg>name:V2</arg>
+<arg>${V2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:35.696228" elapsed="0.043243"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:35.739471" level="INFO">Typing text '0' into text field 'name:V3'.</msg>
+<arg>name:V3</arg>
+<arg>${V3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:35.739471" elapsed="0.042452"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:35.781923" level="INFO">Clicking button 'xpath=//input[@type='submit' and @value='Identificar']'.</msg>
+<arg>xpath=//input[@type='submit' and @value='Identificar']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:35.781923" elapsed="0.238235"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-15T14:08:37.020307" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-15T14:08:36.020158" elapsed="1.000149"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:37.081974" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:37.020307" elapsed="0.061667"/>
+</kw>
+<arg>${L1}</arg>
+<arg>${L2}</arg>
+<arg>${L3}</arg>
+<status status="PASS" start="2025-05-15T14:08:35.640839" elapsed="1.441135"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:37.100054" level="INFO">Current page contains text 'erro'.</msg>
+<arg>erro</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-15T14:08:37.081974" elapsed="0.018080"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:37.162092" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:37.100054" elapsed="0.072761"/>
+</kw>
+<arg>0</arg>
+<arg>0</arg>
+<arg>0</arg>
+<status status="PASS" start="2025-05-15T14:08:35.640839" elapsed="1.531976"/>
+</kw>
+<status status="PASS" start="2025-05-15T14:08:35.640839" elapsed="1.531976"/>
+</test>
+<test id="s1-t5" name="Lado Negativo" line="13">
+<kw name="Verificar Mensagem De Erro Com Entradas Invalidas" owner="triangulo_keywords">
+<kw name="Preencher Lados Do Triangulo" owner="triangulo_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:37.173823" level="INFO">Typing text '-1' into text field 'name:V1'.</msg>
+<arg>name:V1</arg>
+<arg>${V1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:37.173823" elapsed="0.045369"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:37.219192" level="INFO">Typing text '4' into text field 'name:V2'.</msg>
+<arg>name:V2</arg>
+<arg>${V2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:37.219192" elapsed="0.043422"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:37.263613" level="INFO">Typing text '5' into text field 'name:V3'.</msg>
+<arg>name:V3</arg>
+<arg>${V3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:37.262614" elapsed="0.042376"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:37.305990" level="INFO">Clicking button 'xpath=//input[@type='submit' and @value='Identificar']'.</msg>
+<arg>xpath=//input[@type='submit' and @value='Identificar']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:37.304990" elapsed="0.244065"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-15T14:08:38.549502" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-15T14:08:37.549055" elapsed="1.000447"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:38.622791" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:38.549502" elapsed="0.073289"/>
+</kw>
+<arg>${L1}</arg>
+<arg>${L2}</arg>
+<arg>${L3}</arg>
+<status status="PASS" start="2025-05-15T14:08:37.173823" elapsed="1.448968"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:38.630358" level="INFO">Current page contains text 'erro'.</msg>
+<arg>erro</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-15T14:08:38.622791" elapsed="0.007567"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:38.706060" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:38.630358" elapsed="0.075702"/>
+</kw>
+<arg>-1</arg>
+<arg>4</arg>
+<arg>5</arg>
+<status status="PASS" start="2025-05-15T14:08:37.173823" elapsed="1.532237"/>
+</kw>
+<status status="PASS" start="2025-05-15T14:08:37.172815" elapsed="1.533245"/>
+</test>
+<test id="s1-t6" name="Valores Não Numéricos" line="14">
+<kw name="Verificar Mensagem De Erro Com Entradas Invalidas" owner="triangulo_keywords">
+<kw name="Preencher Lados Do Triangulo" owner="triangulo_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:38.708068" level="INFO">Typing text 'a' into text field 'name:V1'.</msg>
+<arg>name:V1</arg>
+<arg>${V1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:38.708068" elapsed="0.045376"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:38.754695" level="INFO">Typing text '2' into text field 'name:V2'.</msg>
+<arg>name:V2</arg>
+<arg>${V2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:38.753444" elapsed="0.043566"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:38.797580" level="INFO">Typing text '3' into text field 'name:V3'.</msg>
+<arg>name:V3</arg>
+<arg>${V3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:38.797010" elapsed="0.043299"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:38.840309" level="INFO">Clicking button 'xpath=//input[@type='submit' and @value='Identificar']'.</msg>
+<arg>xpath=//input[@type='submit' and @value='Identificar']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:08:38.840309" elapsed="0.239324"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-15T14:08:40.079883" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-15T14:08:39.079633" elapsed="1.000250"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:40.144196" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:40.079883" elapsed="0.064313"/>
+</kw>
+<arg>${L1}</arg>
+<arg>${L2}</arg>
+<arg>${L3}</arg>
+<status status="PASS" start="2025-05-15T14:08:38.708068" elapsed="1.436128"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:40.144196" level="INFO">Current page contains text 'erro'.</msg>
+<arg>erro</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-15T14:08:40.144196" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:08:40.222334" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T14:08:40.160138" elapsed="0.062196"/>
+</kw>
+<arg>a</arg>
+<arg>2</arg>
+<arg>3</arg>
+<status status="PASS" start="2025-05-15T14:08:38.707069" elapsed="1.515265"/>
+</kw>
+<status status="PASS" start="2025-05-15T14:08:38.707069" elapsed="1.515265"/>
+</test>
+<kw name="Fechar Navegador" owner="triangulo_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-15T14:08:40.222334" elapsed="2.135142"/>
+</kw>
+<status status="PASS" start="2025-05-15T14:08:40.222334" elapsed="2.135142"/>
+</kw>
+<status status="PASS" start="2025-05-15T14:08:28.809192" elapsed="13.548284"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Validacao Erro">Validacao Erro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

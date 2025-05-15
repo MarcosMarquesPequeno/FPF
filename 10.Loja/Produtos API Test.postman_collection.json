@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "420a9c69-9acb-46a5-b735-7b065bd097d8",
+		"name": "Produtos API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42993299"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Produtos",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Inicializa índice se não existir\r",
+							"if (!pm.collectionVariables.get(\"produto_index\")) {\r",
+							"    pm.collectionVariables.set(\"produto_index\", \"0\");\r",
+							"}\r",
+							"\r",
+							"// Pega lista produtos da variável coleção\r",
+							"let produtosRaw = pm.collectionVariables.get(\"produtos\");\r",
+							"if (!produtosRaw) throw new Error(\"Variável 'produtos' não definida.\");\r",
+							"\r",
+							"let produtos = JSON.parse(produtosRaw);\r",
+							"\r",
+							"// Pega índice atual\r",
+							"let index = parseInt(pm.collectionVariables.get(\"produto_index\"));\r",
+							"\r",
+							"// Valida índice para não sair do range\r",
+							"if (index >= produtos.length) {\r",
+							"    throw new Error(\"Índice produto_index fora do range da lista produtos\");\r",
+							"}\r",
+							"\r",
+							"// Produto atual\r",
+							"let produtoAtual = produtos[index];\r",
+							"\r",
+							"// Debug para console\r",
+							"console.log(\"Produto atual para cadastro:\", produtoAtual);\r",
+							"\r",
+							"// Define variável para o body\r",
+							"pm.collectionVariables.set(\"produto_para_cadastro\", JSON.stringify(produtoAtual));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code é 201 - Criado\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"let json = pm.response.json();\r",
+							"let idProduto = json.id;\r",
+							"\r",
+							"/*if (!idProduto) {\r",
+							"    throw new Error(\"ID do produto não retornado pela API\");\r",
+							"}*/\r",
+							"\r",
+							"// Recupera lista IDs ou cria uma nova\r",
+							"let idsProdutos = pm.collectionVariables.get(\"ids_produtos\");\r",
+							"idsProdutos = idsProdutos ? JSON.parse(idsProdutos) : [];\r",
+							"\r",
+							"// Adiciona novo ID\r",
+							"idsProdutos.push(idProduto);\r",
+							"\r",
+							"// Atualiza variável de coleção\r",
+							"pm.collectionVariables.set(\"ids_produtos\", JSON.stringify(idsProdutos));\r",
+							"\r",
+							"// Incrementa índice\r",
+							"let index = parseInt(pm.collectionVariables.get(\"produto_index\"));\r",
+							"index++;\r",
+							"pm.collectionVariables.set(\"produto_index\", index);\r",
+							"\r",
+							"// Define próximo passo: continua cadastrando ou vai para listar\r",
+							"let produtos = JSON.parse(pm.collectionVariables.get(\"produtos\"));\r",
+							"\r",
+							"if (index < produtos.length) {\r",
+							"    pm.execution.setNextRequest(pm.info.requestName); // Repetir POST\r",
+							"} else {\r",
+							"    // Inicializa índice de listagem\r",
+							"    pm.collectionVariables.set(\"produto_list_index\", \"0\");\r",
+							"    pm.execution.setNextRequest(\"Listar Produtos\"); // Nome exato da requisição GET listar\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{produto_para_cadastro}}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/produtos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"produtos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Produtos",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let idsProdutos = pm.collectionVariables.get(\"ids_produtos\");\r",
+							"if (!idsProdutos) {\r",
+							"    throw new Error(\"Nenhum produto cadastrado para listar\");\r",
+							"}\r",
+							"\r",
+							"let ids = JSON.parse(idsProdutos);\r",
+							"\r",
+							"// Inicializa índice, se necessário\r",
+							"if (!pm.collectionVariables.get(\"produto_list_index\")) {\r",
+							"    pm.collectionVariables.set(\"produto_list_index\", 0);\r",
+							"}\r",
+							"\r",
+							"let index = parseInt(pm.collectionVariables.get(\"produto_list_index\"));\r",
+							"\r",
+							"// Verifica se acabou\r",
+							"if (index >= ids.length) {\r",
+							"    pm.execution.setNextRequest(null);\r",
+							"} else {\r",
+							"    let idAtual = ids[index];\r",
+							"\r",
+							"    pm.collectionVariables.set(\"produto_list_id\", idAtual);\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code é 200 - OK\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const json = pm.response.json();\r",
+							"let produtos = JSON.parse(pm.collectionVariables.get(\"produtos\"));\r",
+							"let index = parseInt(pm.collectionVariables.get(\"produto_list_index\"));\r",
+							"\r",
+							"pm.test(\"Nome do produto correto\", () => {\r",
+							"    pm.expect(json.nome).to.eql(produtos[index].nome);\r",
+							"});\r",
+							"pm.test(\"Preço correto\", () => {\r",
+							"    pm.expect(json.preco).to.eql(produtos[index].preco);\r",
+							"});\r",
+							"pm.test(\"Quantidade correta\", () => {\r",
+							"    pm.expect(json.quantidade).to.eql(produtos[index].quantidade);\r",
+							"});\r",
+							"pm.test(\"Categoria correta\", () => {\r",
+							"    pm.expect(json.categoria).to.eql(produtos[index].categoria);\r",
+							"});\r",
+							"\r",
+							"// Incrementa índice\r",
+							"index++;\r",
+							"pm.collectionVariables.set(\"produto_list_index\", index);\r",
+							"\r",
+							"if (index < produtos.length) {\r",
+							"    pm.execution.setNextRequest(pm.info.requestName);\r",
+							"} else {\r",
+							"    pm.execution.setNextRequest(null);\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/produtos/{{produto_list_id}}/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"produtos",
+						"{{produto_list_id}}",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "produtos",
+			"value": "[\n  {\"nome\": \"Mouse Gamer RGB\", \"preco\": \"99.90\", \"quantidade\": 10, \"categoria\": 1},\n  {\"nome\": \"Memória DDR4 8GB\", \"preco\": \"150.00\", \"quantidade\": 5, \"categoria\": 2},\n  {\"nome\": \"SSD 1TB NVMe\", \"preco\": \"300.00\", \"quantidade\": 8, \"categoria\": 3},\n  {\"nome\": \"Placa de Vídeo RTX 3060\", \"preco\": \"1899.99\", \"quantidade\": 3, \"categoria\": 4},\n  {\"nome\": \"Gabinete Gamer ATX\", \"preco\": \"250.00\", \"quantidade\": 4, \"categoria\": 5},\n  {\"nome\": \"Placa Mãe B550M\", \"preco\": \"600.00\", \"quantidade\": 2, \"categoria\": 6},\n  {\"nome\": \"Fonte 650W 80 Plus Bronze\", \"preco\": \"350.00\", \"quantidade\": 6, \"categoria\": 7},\n  {\"nome\": \"AMD Ryzen 5 5600X\", \"preco\": \"999.99\", \"quantidade\": 5, \"categoria\": 8},\n  {\"nome\": \"Geladeira Inox\", \"preco\": \"2499.90\", \"quantidade\": 1, \"categoria\": 9},\n  {\"nome\": \"Jogo de Cama Queen\", \"preco\": \"199.90\", \"quantidade\": 7, \"categoria\": 10}\n]",
+			"type": "string"
+		},
+		{
+			"key": "indexAtual",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "produto_index",
+			"value": ""
+		},
+		{
+			"key": "produto_para_cadastro",
+			"value": ""
+		},
+		{
+			"key": "produto_list_index",
+			"value": ""
+		},
+		{
+			"key": "produto_list_id",
+			"value": ""
+		},
+		{
+			"key": "ids_produtos",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
