@@ -12,14 +12,7 @@ Antes de executar os testes, certifique-se de ter os seguintes itens instalados 
 • Navegador Microsoft Edge: [https://www.microsoft.com/edge](https://www.microsoft.com/edge)  
 • Edge WebDriver compatível com sua versão do Edge: [https://developer.microsoft.com/microsoft-edge/tools/webdriver/](https://developer.microsoft.com/microsoft-edge/tools/webdriver/)
 
-Você pode instalar as dependências Python com:
-
-```bash
-pip install robotframework
-pip install robotframework-seleniumlibrary
-```
-
-### 🚀 Como usar
+### 📦 Como instalar as dependências do projeto
 
 1. Clone este repositório:
 
@@ -28,19 +21,41 @@ git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
 ```
 
-2. Baixe o Edge WebDriver correspondente à versão do seu navegador Edge:
-
-Acesse : Edge WebDriver compatível com sua versão do Edge: [https://developer.microsoft.com/microsoft-edge/tools/webdriver/](https://developer.microsoft.com/microsoft-edge/tools/webdriver/)
-
-Extraia o executável e coloque-o em uma pasta que esteja no PATH do sistema, ou configure o caminho diretamente nos seus testes.
-
-Execute os testes automatizados:
+Instale as bibliotecas Python necessárias com:
 
 ```bash
-robot tests/
+pip install -r requirements.txt
 ```
 
-Os relatórios de execução e logs serão gerados automaticamente na raiz do projeto ou caso queria em uma pasta expecifica.
+Isso irá instalar automaticamente todas as bibliotecas necessárias:
+
+• `robotframework`
+• `robotframework-seleniumlibrary`
+• `selenium`
+
+### 🚀 Como executar os testes
+
+1. Execute o seguinte comando na raiz do projeto:
+
+• para excutar o teste de classificacão dos triangulos
+
+```bash
+robot -d results tests/classificao_triangular.robot
+```
+
+• para excutar o teste de validacão dos triangulos
+
+```bash
+robot -d results tests/validacao_erro.robot
+```
+
+• caso queira adicionar nome aos aquivos log.html, report.html e output.html
+
+```bash
+robot -d .\results --log ^ADICINAR_NOME^_triangular_log.html --report ^ADICINAR_NOME^_triangular_report.html --output ^ADICINAR_NOME^_triangular_output.xml .\testes\teste.robot
+```
+
+O parâmetro -d results garante que os relatórios e logs sejam salvos dentro da pasta results/.
 
 #### 🧪 Estrutura do projeto
 
@@ -50,6 +65,7 @@ Os relatórios de execução e logs serão gerados automaticamente na raiz do pr
 ├── resources/ # Keywords customizadas (se houver)
 ├── results/ # Relatórios e logs gerados automaticamente crei a pasta manualmente
 ├── Relatorio_Teste_Triangulo.docx # Relatório dos testes que foram aplicados em .docx
+├── requirements.txt # Arquivo requirements.txt com dependências
 └── README.md # Este arquivo
 ```
 
