@@ -44,12 +44,14 @@ Os relatórios de execução e logs serão gerados automaticamente na raiz do pr
 
 #### 🧪 Estrutura do projeto
 
+```
 /
 ├── tests/ # Casos de testes Robot Framework (.robot)
 ├── resources/ # Keywords customizadas (se houver)
 ├── results/ # Relatórios e logs gerados automaticamente crei a pasta manualmente
 ├── Relatorio_Teste_Triangulo.docx # Relatório dos testes que foram aplicados em .docx
 └── README.md # Este arquivo
+```
 
 #### 📁 Observações
 

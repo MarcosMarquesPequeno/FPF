@@ -5,11 +5,13 @@ Cada pasta corresponde a um dos desafios ou atividades solicitadas na prova, con
 
 ## 🗂️ Estrutura do Repositório
 
+```
 ├── 9.Triangulo/
 ├── 10.Loja/
 ├── 11.Script_linux/
 ├── Respostas_questoes1_a_8/
 └── README.md ← (Este arquivo)
+```
 
 ---
 

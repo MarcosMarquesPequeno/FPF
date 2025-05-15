@@ -21,7 +21,7 @@ git clone https://github.com/Vanilton18/lojaapi.git
 cd lojaapi
 ```
 
-2.Suba o serviço da API com Docker:
+2. Suba o serviço da API com Docker:
 
 ```bash
 docker-compose up -d
