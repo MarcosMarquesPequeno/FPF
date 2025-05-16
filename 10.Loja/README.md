@@ -12,7 +12,7 @@ Este projeto contém uma coleção Postman para teste automatizado da API de Pro
 
 • [Git](https://git-scm.com/): Para clonar o repositório do projeto da API.
 
-### 🚀 Como configurar e executar os testes
+## 🚀 Como configurar e executar os testes
 
 1. Clone o repositório da API:
 
@@ -37,14 +37,14 @@ docker-compose up -d
 
 6. Execute a coleção para rodar os testes automatizados.
 
-#### 🧪 Estrutura esperada dos testes
+## 🧪 Estrutura esperada dos testes
 
 • Cadastro automático dos produtos da lista
 • Validação do cadastro com resposta HTTP 201
 • Armazenamento dos IDs cadastrados para testes posteriores
 • Listagem e validação dos produtos cadastrados via IDs obtidos
 
-##### 📁 Observações importantes
+## 📁 Observações importantes
 
 • A API atual não retorna o ID do produto no cadastro, o que impacta a automação dos testes.
 
@@ -54,7 +54,7 @@ docker-compose up -d
 
 • Caso queira rodar os testes em outra máquina, siga este README para garantir a configuração correta do ambiente.
 
-###### 🧑‍💻 Autor
+## 🧑‍💻 Autor
 
 **Marcos Marques**  
 📧 marcosmarques.sw@gmail.com

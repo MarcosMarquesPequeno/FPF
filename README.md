@@ -15,7 +15,7 @@ Cada pasta corresponde a um dos desafios ou atividades solicitadas na prova, con
 
 ---
 
-### 📌 Descrições das Pastas
+## 📌 Descrições das Pastas
 
 #### `9.Triangulo/`
 
@@ -50,14 +50,14 @@ Cada resposta é justificada com base em boas práticas e conceitos da área, ab
 
 ---
 
-### 🧑‍💻 Autor
+## 🧑‍💻 Autor
 
 **Marcos Marques**  
 📧 marcosmarques.sw@gmail.com
 
 ---
 
-### ✅ Observações Finais
+## ✅ Observações Finais
 
 - Todos os projetos foram desenvolvidos com foco em **boas práticas de teste**, **automação** e **organização do ambiente de execução**.
 - As instruções em cada pasta permitem a reprodução completa dos testes em qualquer máquina compatível.

@@ -62,7 +62,7 @@ As respostas estão listadas abaixo, com uma breve explicação.
 
 ---
 
-##### 🧑‍💻 Autor
+## 🧑‍💻 Autor
 
 **Marcos Marques**  
 📧 marcosmarques.sw@gmail.com

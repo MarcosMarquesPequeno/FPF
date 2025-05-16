@@ -12,7 +12,7 @@ Antes de executar os testes, certifique-se de ter os seguintes itens instalados 
 • Navegador Microsoft Edge: [https://www.microsoft.com/edge](https://www.microsoft.com/edge)  
 • Edge WebDriver compatível com sua versão do Edge: [https://developer.microsoft.com/microsoft-edge/tools/webdriver/](https://developer.microsoft.com/microsoft-edge/tools/webdriver/)
 
-### 📦 Como instalar as dependências do projeto
+## 📦 Como instalar as dependências do projeto
 
 1. Clone este repositório:
 
@@ -35,7 +35,7 @@ Isso irá instalar automaticamente todas as bibliotecas necessárias:
 • selenium
 ```
 
-### 🚀 Como executar os testes
+## 🚀 Como executar os testes
 
 1. Execute o seguinte comando na raiz do projeto:
 
@@ -59,7 +59,7 @@ robot -d .\results --log ^ADICINAR_NOME^_triangular_log.html --report ^ADICINAR_
 
 O parâmetro -d results garante que os relatórios e logs sejam salvos dentro da pasta results/.
 
-#### 🧪 Estrutura do projeto
+## 🧪 Estrutura do projeto
 
 ```
 /
@@ -71,13 +71,13 @@ O parâmetro -d results garante que os relatórios e logs sejam salvos dentro da
 └── README.md # Este arquivo
 ```
 
-#### 📁 Observações
+## 📁 Observações
 
 • O Edge WebDriver deve estar corretamente configurado no PATH para que o Selenium consiga abrir o navegador.
 • Caso utilize outro navegador, adapte a configuração da SeleniumLibrary conforme necessário.
 • Certifique-se que a URL `http://www.vanilton.net/triangulo/` esteja acessível para que os testes funcionem corretamente.
 
-###### 🧑‍💻 Autor
+## 🧑‍💻 Autor
 
 **Marcos Marques**  
 📧 marcosmarques.sw@gmail.com

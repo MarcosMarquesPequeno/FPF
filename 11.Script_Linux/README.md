@@ -27,7 +27,7 @@ sudo apt update
 sudo apt install wget unzip dos2unix
 ```
 
-### 🚀 Como usar
+## 🚀 Como usar
 
 1. Clone este repositório:
 
@@ -66,7 +66,7 @@ Ou:
 bash script.sh
 ```
 
-#### 🧪 Exemplo de Estrutura Esperada
+## 🧪 Exemplo de Estrutura Esperada
 
 Após a execução, a estrutura de diretórios ficará assim:
 
@@ -77,7 +77,7 @@ seu_usuario/
 
 ```
 
-##### 📁 Observações
+## 📁 Observações
 
 O script foi desenvolvido para uso em ambientes Linux e WSL.
 
@@ -85,7 +85,7 @@ A cada nova execução, a pasta será recriada e sobrescrita.
 
 Evite colocar arquivos manuais dentro da pasta criada pelo script, pois eles podem ser apagados.
 
-###### 🧑‍💻 Autor
+## 🧑‍💻 Autor
 
 **Marcos Marques**  
 📧 marcosmarques.sw@gmail.com
