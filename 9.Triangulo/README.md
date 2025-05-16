@@ -63,8 +63,8 @@ O parâmetro -d results garante que os relatórios e logs sejam salvos dentro da
 
 ```
 /
-├── tests/ # Casos de testes Robot Framework (.robot)
-├── resources/ # Keywords customizadas (se houver)
+├── tests/ # Casos de testes Robot Framework
+├── resources/ # Keywords customizadas
 ├── results/ # Relatórios e logs gerados automaticamente crei a pasta manualmente
 ├── Relatorio_Teste_Triangulo.docx # Relatório dos testes que foram aplicados em .docx
 ├── requirements.txt # Arquivo requirements.txt com dependências

@@ -73,7 +73,7 @@ Após a execução, a estrutura de diretórios ficará assim:
 ```
 seu_usuario/
 ├── resultado/
-└── readme.md # ou outros arquivos extraídos
+└── readme.md
 
 ```
 
