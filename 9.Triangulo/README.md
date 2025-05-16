@@ -6,13 +6,11 @@ Este repositório contém a automação dos testes funcionais para a aplicação
 
 Antes de executar os testes, certifique-se de ter os seguintes itens instalados no seu sistema:
 
-```
-• [Python 3.8](https://www.python.org/downloads/) ou [superior](https://www.python.org/downloads/):
-• [Robot Framework](https://robotframework.org/)
-• [Robot Framework SeleniumLibrary](https://robotframework.org/SeleniumLibrary/)
-• [Navegador Microsoft Edge](https://www.microsoft.com/edge)
-• [Edge WebDriver compatível com sua versão do Edge](https://developer.microsoft.com/microsoft-edge/tools/webdriver/)
-```
+- [Python 3.8](https://www.python.org/downloads/) ou [superior](https://www.python.org/downloads/)
+- [Robot Framework](https://robotframework.org/)
+- [Robot Framework SeleniumLibrary](https://robotframework.org/SeleniumLibrary/)
+- [Navegador Microsoft Edge](https://www.microsoft.com/edge)
+- [Edge WebDriver compatível com sua versão do Edge](https://developer.microsoft.com/microsoft-edge/tools/webdriver/)
 
 ## 📦 Como instalar as dependências do projeto
 
