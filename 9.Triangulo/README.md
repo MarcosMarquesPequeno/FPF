@@ -6,11 +6,11 @@ Este repositório contém a automação dos testes funcionais para a aplicação
 
 Antes de executar os testes, certifique-se de ter os seguintes itens instalados no seu sistema:
 
-- [Python 3.8](https://www.python.org/downloads/) ou [superior](https://www.python.org/downloads/): Linguagem de programação necessária para executar os testes com Robot Framework.
-- [Robot Framework](https://robotframework.org/): Framework de automação de testes baseado em palavras-chave.
-- [Robot Framework SeleniumLibrary](https://robotframework.org/SeleniumLibrary/): Biblioteca que permite interagir com navegadores web usando Selenium dentro do Robot Framework.
-- [Navegador Microsoft Edge](https://www.microsoft.com/edge): Navegador utilizado nos testes automatizados.
-- [Edge WebDriver compatível com sua versão do Edge](https://developer.microsoft.com/microsoft-edge/tools/webdriver/): Driver necessário para que o Selenium controle o navegador Edge durante a execução dos testes.
+- [Python 3.8](https://www.python.org/downloads/) ou superior: Linguagem usada nos testes.
+- [Robot Framework](https://robotframework.org/): Ferramenta de automação de testes.
+- [Robot Framework SeleniumLibrary](https://robotframework.org/SeleniumLibrary/): Biblioteca para automação em navegadores.
+- [Microsoft Edge](https://www.microsoft.com/edge): Navegador usado nos testes.
+- [Edge WebDriver](https://developer.microsoft.com/microsoft-edge/tools/webdriver/): Driver para controle do Edge via Selenium.
 
 ## 📦 Como instalar as dependências do projeto
 
