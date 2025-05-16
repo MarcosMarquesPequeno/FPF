@@ -39,10 +39,12 @@ docker-compose up -d
 
 ## 🧪 Estrutura esperada dos testes
 
+```
 • Cadastro automático dos produtos da lista
 • Validação do cadastro com resposta HTTP 201
 • Armazenamento dos IDs cadastrados para testes posteriores
 • Listagem e validação dos produtos cadastrados via IDs obtidos
+```
 
 ## 📁 Observações importantes
 
