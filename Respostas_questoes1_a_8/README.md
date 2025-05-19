@@ -23,7 +23,7 @@ As respostas estão listadas abaixo, com uma breve explicação.
 ### 3. Sobre o teste de caixa preta:
 
 **Resposta correta:** e) Teste que verifica as saídas de dados, usando diversos tipos de entradas de dados.  
-🔎 O testador não conhece o código-fonte e valida se o sistema retorna os resultados esperados com diferentes entradas, incluse as questões 9 e 10 são testes de caixa preta.
+🔎 O testador não conhece o código-fonte e valida se o sistema retorna os resultados esperados com diferentes entradas, inclusive as questões 9 e 10 são testes de caixa preta.
 
 ---
 

@@ -54,7 +54,7 @@ robot -d results tests/validacao_erro.robot
 • caso queira adicionar nome aos aquivos log.html, report.html e output.html
 
 ```bash
-robot -d .\results --log ^ADICINAR_NOME^_triangular_log.html --report ^ADICINAR_NOME^_triangular_report.html --output ^ADICINAR_NOME^_triangular_output.xml .\testes\teste.robot
+robot -d .\results --log ^ADICIONAR_NOME^_triangular_log.html --report ^ADICIONAR_NOME^_triangular_report.html --output ^ADICIONAR_NOME^_triangular_output.xml .\testes\teste.robot
 ```
 
 O parâmetro -d results garante que os relatórios e logs sejam salvos dentro da pasta results/.
@@ -73,9 +73,9 @@ O parâmetro -d results garante que os relatórios e logs sejam salvos dentro da
 
 ## 📁 Observações
 
-• O Edge WebDriver deve estar corretamente configurado no PATH para que o Selenium consiga abrir o navegador.
-• Caso utilize outro navegador, adapte a configuração da SeleniumLibrary conforme necessário.
-• Certifique-se que a URL `http://www.vanilton.net/triangulo/` esteja acessível para que os testes funcionem corretamente.
+- O Edge WebDriver deve estar corretamente configurado no PATH para que o Selenium consiga abrir o navegador.
+- Caso utilize outro navegador, adapte a configuração da SeleniumLibrary conforme necessário.
+- Certifique-se que a URL `http://www.vanilton.net/triangulo/` esteja acessível para que os testes funcionem corretamente.
 
 ## 🧑‍💻 Autor
 
